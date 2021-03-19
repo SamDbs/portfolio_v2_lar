@@ -9,6 +9,12 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
+
+    public function contact()
+    {
+        return $this->hasOne(Contact::class);
+    }
+
     use HasFactory, Notifiable;
 
     /**
